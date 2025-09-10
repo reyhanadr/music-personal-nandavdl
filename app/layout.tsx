@@ -3,6 +3,7 @@ import {Cormorant, Inter, Lora } from "next/font/google";
 import "./globals.css";
 import { Header } from "./layout/header";
 import { Footer } from "./layout/footer";
+import Head from 'next/head';
 
 const cormorant = Cormorant({
   variable: "--font-cormorant",
@@ -45,6 +46,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={lora.className}>
+      <Head>  
+        <meta name="robots" content="noindex" />
+      </Head>
       <body
         className={`${lora.variable} ${inter.variable} antialiased`}
       >
